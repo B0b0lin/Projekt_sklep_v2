@@ -1,0 +1,14 @@
+C:\Users\ignac\Desktop\projekt_sklep_gui\Projekt_sklep_gui\bin\Debug\Projekt_sklep_gui.exe.config
+C:\Users\ignac\Desktop\projekt_sklep_gui\Projekt_sklep_gui\bin\Debug\Projekt_sklep_gui.exe
+C:\Users\ignac\Desktop\projekt_sklep_gui\Projekt_sklep_gui\bin\Debug\Projekt_sklep_gui.pdb
+C:\Users\ignac\Desktop\projekt_sklep_gui\Projekt_sklep_gui\obj\Debug\Projekt_sklep_gui.csproj.AssemblyReference.cache
+C:\Users\ignac\Desktop\projekt_sklep_gui\Projekt_sklep_gui\obj\Debug\Projekt_sklep_gui.Properties.Resources.resources
+C:\Users\ignac\Desktop\projekt_sklep_gui\Projekt_sklep_gui\obj\Debug\Projekt_sklep_gui.csproj.GenerateResource.cache
+C:\Users\ignac\Desktop\projekt_sklep_gui\Projekt_sklep_gui\obj\Debug\Projekt_sklep_gui.csproj.CoreCompileInputs.cache
+C:\Users\ignac\Desktop\projekt_sklep_gui\Projekt_sklep_gui\obj\Debug\Projekt_sklep_gui.exe
+C:\Users\ignac\Desktop\projekt_sklep_gui\Projekt_sklep_gui\obj\Debug\Projekt_sklep_gui.pdb
+C:\Users\ignac\Desktop\projekt_sklep_gui\Projekt_sklep_gui\obj\Debug\Projekt_sklep_gui.Login.resources
+C:\Users\ignac\Desktop\projekt_sklep_gui\Projekt_sklep_gui\obj\Debug\Projekt_sklep_gui.Magazyn.resources
+C:\Users\ignac\Desktop\projekt_sklep_gui\Projekt_sklep_gui\bin\Debug\Guna.UI2.dll
+C:\Users\ignac\Desktop\projekt_sklep_gui\Projekt_sklep_gui\obj\Debug\Projekt_sklep_gui.csproj.CopyComplete
+C:\Users\ignac\Desktop\projekt_sklep_gui\Projekt_sklep_gui\obj\Debug\Projekt_sklep_gui.Sprzedaz.resources
