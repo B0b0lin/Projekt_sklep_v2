@@ -16,7 +16,7 @@ namespace Projekt_sklep_gui
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Sprzedaz());
+            Application.Run(new Magazyn());
         }
     }
 }
