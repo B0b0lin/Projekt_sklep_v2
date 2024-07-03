@@ -41,31 +41,39 @@ namespace Projekt_sklep_gui
         private void ZatwierdzBtn_Click(object sender, EventArgs e)
         {
             int naleznosc = Convert.ToInt32(NaleznoscText.Text);
-            int kwota = Convert.ToInt32(KwotaKientText.Text);
-            if(kwota >= naleznosc)
+            if (KwotaKientText.Text == "")
             {
-                string Query = $"update zarobek set suma = (select sum(cena_brutto * quantity) from koszyk)+(select suma from zarobek where Rodzaj = 'Gotowka') where Rodzaj = 'Gotowka'";
-                Query = string.Format(Query);
-                Con.SetData(Query);
-
-
-                foreach (string i in Con.GetDataToList("Select nazwa_prod from koszyk"))
-                {
-                    string Query1 = $"IF EXISTS (SELECT * FROM Utarg WHERE Przedmiot ='{i}') BEGIN update utarg set Ilosc = Ilosc+(select Quantity from Koszyk where Nazwa_prod = '{i}'), Suma_zarobiona = Suma_zarobiona + (select Quantity*Cena_brutto from Koszyk where Nazwa_prod='{i}') where Przedmiot = '{i}' END ELSE BEGIN insert into utarg values ('{i}',(select Quantity*Cena_brutto from Koszyk where Nazwa_prod='{i}'),(select Quantity from Koszyk where Nazwa_prod = '{i}')) END";
-                    Query1 = string.Format(Query1);
-                    Con.SetData(Query1);
-                }
-
-                Con.SetData("Truncate table koszyk");
-                Koszyk.Refresh();
-
-                DialogResult dr = MessageBox.Show("Tranzakcja przebiegła pomyślnie", "Tranzakcja udana");
-                this.Close();
+                MessageBox.Show("Nie zostawiaj pustego pola");
             }
             else
             {
-                MessageBox.Show("Podaj prawidłową kwotę");
+                int kwota = Convert.ToInt32(KwotaKientText.Text);
+                if(kwota >= naleznosc)
+                {
+                    string Query = $"update zarobek set suma = (select sum(cena_brutto * quantity) from koszyk)+(select suma from zarobek where Rodzaj = 'Gotowka') where Rodzaj = 'Gotowka'";
+                    Query = string.Format(Query);
+                    Con.SetData(Query);
+        
+        
+                    foreach (string i in Con.GetDataToList("Select nazwa_prod from koszyk"))
+                    {
+                        string Query1 = $"IF EXISTS (SELECT * FROM Utarg WHERE Przedmiot ='{i}') BEGIN update utarg set Ilosc = Ilosc+(select Quantity from Koszyk where Nazwa_prod = '{i}'), Suma_zarobiona = Suma_zarobiona + (select Quantity*Cena_brutto from Koszyk where Nazwa_prod='{i}') where Przedmiot = '{i}' END ELSE BEGIN insert into utarg values ('{i}',(select Quantity*Cena_brutto from Koszyk where Nazwa_prod='{i}'),(select Quantity from Koszyk where Nazwa_prod = '{i}')) END";
+                        Query1 = string.Format(Query1);
+                        Con.SetData(Query1);
+                    }
+        
+                    Con.SetData("Truncate table koszyk");
+                    Koszyk.Refresh();
+        
+                    DialogResult dr = MessageBox.Show("Tranzakcja przebiegła pomyślnie", "Tranzakcja udana");
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show("Podaj prawidłową kwotę");
+                }
             }
+        
         }
 
         private void ResztaSum(object sender, EventArgs e)
